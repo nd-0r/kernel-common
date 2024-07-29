@@ -10,7 +10,7 @@
 ifndef CONFIG_KASAN
 KBUILD_CFLAGS += -Wlarger-than=28792
 KBUILD_CFLAGS += -Wstack-usage=1856
-KBUILD_CFLAGS += -Wno-error=stringop-overflow Wno-error=bool-operation
+KBUILD_CFLAGS += -Wno-error=stringop-overflow -Wno-error=bool-operation
 else
 ifeq ($(call cc-ifversion, -lt, 0500, y), y)
     $(error -----GCC VERSION TOO SMALL FOR KASAN -----)
