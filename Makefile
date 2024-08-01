@@ -14,8 +14,7 @@ NAME = Roaring Lionus
 #   (this increases performance and avoids hard-to-debug behaviour);
 # o Look for make include files relative to root of kernel src
 MAKEFLAGS += -rR --include-dir=$(CURDIR)
-KBUILD_CFLAGS += -Wnoerror=sizeof-pointer-memaccess -Wnoerror=array-bounds -Wnoerror=array-compare
-
+KBUILD_CFLAGS += -Wnoerror
 # Avoid funny character set dependencies
 unexport LC_ALL
 LC_COLLATE=C
