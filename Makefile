@@ -14,7 +14,7 @@ NAME = Roaring Lionus
 #   (this increases performance and avoids hard-to-debug behaviour);
 # o Look for make include files relative to root of kernel src
 MAKEFLAGS += -rR --include-dir=$(CURDIR)
-KBUILD_CFLAGS += -Wnoerror
+
 # Avoid funny character set dependencies
 unexport LC_ALL
 LC_COLLATE=C
@@ -398,7 +398,6 @@ KBUILD_CFLAGS   := -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs \
 		   -fno-strict-aliasing -fno-common \
 		   -Werror-implicit-function-declaration \
 		   -Wno-format-security \
-		   -Werror	\
 		   -std=gnu89 $(call cc-option,-fno-PIE)
 
 
